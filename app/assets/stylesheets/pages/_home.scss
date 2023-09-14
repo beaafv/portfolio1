@@ -6,11 +6,33 @@
   width: 100vw;
 
 }
+body {
+  overflow-x: hidden;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color:white;
+  letter-spacing: 10px;
+  font-size: 30px;
+}
 
 h2 {
   letter-spacing: 6px;
 }
 
+.first-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .intro {
   display: flex;
@@ -52,16 +74,17 @@ li {
   color:white;
 }
 
+
+.buttons {
+  gap:20px;
+}
 .button1{
-  display: block;
-padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-font-size: var(--bs-nav-link-font-size);
-font-weight: var(--bs-nav-link-font-weight);
+
 color: #2740b0;
 text-decoration: none;
 background: none;
 border: 1px;
-padding: 10px 120px;
+padding: 10px 50px;
 box-sizing: border-box;
 border-radius: 10px;
 border-style: solid;
@@ -81,14 +104,42 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
+.button12 {
+
+  color: #2740b0;
+  text-decoration: none;
+  background: linear-gradient(45deg, #673AB7, #3f51b500);
+  border: 1px;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-style: solid;
+  opacity: 80%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+}
 
 a {
   color:white;
   text-decoration: none;
 }
 
+.fitseek {
 
+  background-image: url(fitseekbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+}
+.wedding {
+  background-image: url(project2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
 
+}
 
 .projects {
   display:flex;
@@ -143,21 +194,11 @@ textarea {
 
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  gap:20px;
-
-}
-
 
 @media only screen and (max-width: 600px) {
   .experience {
     display: flex;
     flex-direction: column;
-    text-align: center;
 
   }
   .cards {
@@ -165,7 +206,6 @@ textarea {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    gap:20px;
   }
 
   .card {
@@ -228,4 +268,31 @@ transform: translateY(6px);
   box-shadow: 2px 2px 2px 2px #ffffff;
   border-radius: 5px;
   opacity: 90%;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
