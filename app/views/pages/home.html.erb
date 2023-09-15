@@ -21,7 +21,9 @@
         <div class="first-column">
                       <h1 class="typewriter">Hi, I'm Beatriz.</h1>
 
-            <h2 class="mb-4"><b>Fullstack Web Developer <i class="fa-brands fa-github"></i></b></h2>
+            <h2 class="mb-4"><b>Fullstack Web Developer <%= link_to('https://github.com/beaafv.com', target: "_blank") do %>
+      <i class="fa-brands fa-github"></i>
+    <% end %></b></h2>
           <div class="d-flex buttons">
             <a href="Dutch.pdf" download="Dutch.pdf" class="button1">Download CV</a>
             <%= link_to 'Contact me!', form_path, class:"button12"%>
@@ -35,7 +37,7 @@
   <div class="row d-flex new" style="flex-direction:column;">
     <h2>FullStack Developer <i class="fa-solid fa-plus" style="color: #ffffff;"></i></h2>
     <p>Le Wagon, batch #1348, Lisbon</p>
-    
+
     <p>
       <h2>Projects: <p></h2>
       <h2><%= link_to "Fitseek", "https://fitseek.co.uk", target: "_blank", style:" color:white; "  %> Mobile App </h2>
