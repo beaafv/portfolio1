@@ -5,9 +5,37 @@
   justify-content: space-evenly;
   width: 100vw;
 
+
 }
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  background: linear-gradient(141deg, rgba(105,134,200,1) 0%, rgba(205,167,245,1) 26%, rgba(255,255,255,1) 72%);
+}
+
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(62, 15, 171); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0); }
 }
 
 .box1 {
@@ -44,13 +72,13 @@ h2 {
 
 
 .experience {
+  top:0;
   flex-direction: row;
   width: 100vw;
   height: 100vh;
   margin:auto;
   align-items:center;
   justify-content: space-evenly;
-  background-color: #2c1198c9;
   text-align: justify;
 }
 
@@ -93,12 +121,12 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
 
 .button1:hover{
   border-color: #1e1c95;
-  color: rgb(1, 1, 1);
+  color: rgb(255, 255, 255);
   box-shadow:0 0,5em 0.5em -0.4em #000000;
   transform: translate Y(-0.15em);
   cursor: pointer;
   opacity: 100%;
-  background: linear-gradient(45deg, #673AB7, #3f51b500);
+  background: linear-gradient(45deg, #673AB7, #3F51B5);
   background-position: 100% 0;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
@@ -106,10 +134,9 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
 }
 .button12 {
 
-  color: #2740b0;
+  color: #ffffff;
   text-decoration: none;
-  background: linear-gradient(45deg, #673AB7, #3f51b500);
-  border: 1px;
+  background: linear-gradient(45deg, #673AB7, #616682);
   padding: 10px 50px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -131,6 +158,11 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
+  filter:grayscale(1);
+}
+
+.fitseek:hover{
+  filter: grayscale(0.5);
 }
 .wedding {
   background-image: url(project2.png);
@@ -138,7 +170,26 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
+  filter: grayscale(1);
 
+}
+
+.wedding:hover {
+  filter: grayscale(0.5);
+}
+
+.chefly {
+  background-image: url(chefly.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  filter:grayscale(1);
+
+}
+
+.chefly:hover{
+  filter: grayscale(0.5);
 }
 
 .projects {
@@ -179,8 +230,17 @@ textarea {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
 
-}
 
+ }
+
+ .profile:hover {
+  transform: translateY(20px);
+
+ }
+
+ .chesspic:hover {
+  transform: translateY(50px);
+ }
 
 
 [type="submit"]:hover {
@@ -211,7 +271,7 @@ textarea {
   .card {
     box-sizing: border-box;
     border-style: solid;
-    border-color: #d8d8d8;
+    background-color: white;
     width: 50vw;
     height: 20vh;
     box-shadow: 2px 2px 2px 2px #5944ac;
