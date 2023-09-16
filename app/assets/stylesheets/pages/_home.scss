@@ -22,6 +22,15 @@ align-items: end;
 
 }
 
+#form {
+  display:flex;
+  flex-direction:column;
+  background-color:#673AB7;
+   padding:200px;
+   color:white;
+   border-radius:8px;
+}
+
 .navbar-toggle {
   cursor: pointer;
 }
@@ -64,11 +73,12 @@ align-items: end;
   margin: auto 0;
   height: 100vh;
   width: 100vw;
-  background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #000000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: black;
   z-index: 9999;
   justify-content: space-evenly;
+  max-height: 100vh;
+  
+
 
 }
 
@@ -86,10 +96,10 @@ body {
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgb(62, 15, 171); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  border-right: .15em solid rgb(62, 15, 171);
+  white-space: nowrap;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  letter-spacing: .15em;
   animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -418,6 +428,16 @@ transform: translateY(6px);
   grid-gap: 16px;
 }
 
+
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: #673AB7;
+  padding: 74px;
+  color: white;
+  border-radius: 8px;
+  max-width: 100vw;
+}
 .card-category {
   background-size: cover;
   background-position: center;
