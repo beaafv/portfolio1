@@ -1,6 +1,7 @@
 <%= javascript_importmap_tags %>
+<%= render 'shared/navbar' %>
 
-<div class="main-profile d-flex">
+<div class="main-profile d-flex" id="main">
   <div class="intro vh-100">
 
      <%= image_tag 'chess.jpg', style:"
@@ -21,7 +22,7 @@
         <div class="first-column">
                       <h1 class="typewriter">Hi, I'm Beatriz.</h1>
 
-            <h2 class="mb-4"><b>Fullstack Web Developer <%= link_to('https://github.com/beaafv.com', target: "_blank") do %>
+            <h2 class="mb-4"><b>Fullstack Web Developer <%= link_to('https://github.com/beaafv', target: "_blank") do %>
       <i class="fa-brands fa-github"></i>
     <% end %></b></h2>
           <div class="d-flex buttons">
@@ -35,26 +36,31 @@
 </div>
 <div class="experience d-flex text-center mt-4">
   <div class="row d-flex new" style="flex-direction:column;">
-    <h2>FullStack Developer <i class="fa-solid fa-plus" style="color: #ffffff;"></i></h2>
+    <h2>I'm FullStack Developer <i class="fa-solid fa-plus" style="color: #ffffff;"></i></h2>
     <p>Le Wagon, batch #1348, Lisbon</p>
-
+    <p> I'm a Fullstack Developer with a background in nursing, combining my compassionate nature and problem-solving skills to create user-centric digital solutions.</p>
     <p>
       <h2>Projects: <p></h2>
-      <h2><%= link_to "Fitseek", "https://fitseek.co.uk", target: "_blank", style:" color:white; "  %> Mobile App </h2>
+      <h2><%= link_to "Fitseek", "https://fitseek.co.uk", target: "_blank", style:" color:white; "  %>  </h2>
+      <p>Fitseek is a mobile App created in the last 2 weeks of Le Wagon's bootcamp. The goal was to aggregate workouts in one place.
+      </p>
     </p>
-    <p> <h2><%= link_to 'Wedding Photography', "https://beaafv.github.io/landingpagefinal", target: "_blank", style:" color:white;" %> WebApp </h2></p>
+    <p> <h2><%= link_to 'Wedding Photography', "https://beaafv.github.io/landingpagefinal", target: "_blank", style:" color:white;" %> </h2></p>
+    <p> A landing page build during StepByTech - it was in top 10 choice's of the contest.</p>
     </p>
+        <p> <h2><%= link_to 'Chefly', "https://cheflybnb-9551dd5074b5.herokuapp.com/", target: "_blank", style:" color:white;" %> </h2></p>
+  <p>Chefly was born during the airbnb week of Le Wagon's Bootcamp. </p>
       <p>Prior experience as a nurse</p>
   </div>
-  <%= image_tag 'experience.jpg', style:"width:40vw; border-radius:100px 200px" %>
+  <%= image_tag 'experience.jpg', style:" border-radius:100px 200px", class:"chessimg1" %>
 </div>
 
-<div class="fitseek vh-100">
+<div class="fitseek vh-100" id="fitseek">
  <div class="container box1 justify-content-center vh-100">
     <h2>
       <%= link_to "Fitseek", "https://fitseek.co.uk",
        target: "_blank", style:" color:white; "
-       %> Mobile App
+       %>
     </h2>
   </div>
 </div>
@@ -64,7 +70,7 @@
       <%= link_to 'Wedding Photography', "https://beaafv.github.io/landingpagefinal",
         target: "_blank",
         style:" color:white;"
-    %> WebApp
+    %>
     </h2>
   </div>
 </div>
@@ -73,7 +79,7 @@
     <h2>
       <%= link_to 'Chefly', "https://cheflybnb-9551dd5074b5.herokuapp.com/chef_offers/28",
       target: "_blank", style:" color:black;"
-      %> WebApp
+      %>
     </h2>
   </div>
 </div>

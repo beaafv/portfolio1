@@ -1,0 +1,12 @@
+
+    <div class="navbar" data-controller="navbar">
+        <div class="navbar-toggle" data-action="click->navbar#toggleMenu">
+            <i class="fa-solid fa-bars-staggered fa-xl" id="open" data-target="navbar.openIcon" data-action="hidden->navbar#toggleMenu"></i>
+            <i class="fa-sharp fa-regular fa-xmark fa-xl", style="color: #030303; display: none;" id="closed" data-target="navbar.closedIcon" data-action="hidden->navbar#toggleMenu"></i>
+        </div>
+        <ul class="navbar-menu" id="navbarMenu" data-target="navbar.menu">
+          <li><%= link_to 'home', root_path %></li>
+           <li><%= link_to 'contact me', form_path %></li>
+          <li><a href="#fitseek">Portfolio</a></li>
+        </ul>
+      </div>
